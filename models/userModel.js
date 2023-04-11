@@ -1,20 +1,25 @@
 const mongoose = require("mongoose");
-const contactSchema = mongoose.Schema({
-    name:{
+const userSchema = mongoose.Schema({
+    username:{
         type: String,
-        required:[true, "Please add the contact name"],
+        required:[true, "Please add the username"],
     },
     email:{
         type: String,
-        required:[true, "Please add the contact email address"],
+        required:[true, "Please add the user email address"],
+        unique:[true, "Email address already taken"],
     },
     phone:{
         type: String,
-        required:[true, "Please add the contact phone address"],
+        required:[true, "Please add the user phone no"],
+    },
+    password:{
+        type: String,
+        required:[true, "Please add the password"],
     }
 },
 {
     timestamps: true
 });
 
-module.exports = mongoose.model("Contact", contactSchema);
+module.exports = mongoose.model("Users", userSchema);
