@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "235c7206-a88c-4f5f-a9cf-80d436f9499d",
+		"name": "My Contacts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27223537"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"deepesh\", \r\n    \"email\":\"deepesh@yopmail.com\", \r\n    \"phone\":\"9898889888\", \r\n    \"password\":\"deepesh@123\"\r\n}"
+						},
+						"url": "http://localhost:5000/api/users/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"deepesh@yopmail.com\",\r\n    \"password\":\"deepesh@123\"\r\n}"
+						},
+						"url": "http://localhost:5000/api/users/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Login User Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZGVlcGVzaCIsImVtYWlsIjoiZGVlcGVzaEB5b3BtYWlsLmNvbSIsImlkIjoiNjQ1NDY2ZTZlZTUyMjA4Y2EwMzZhN2ZmIn0sImlhdCI6MTY4MzI1MzIyMSwiZXhwIjoxNjgzMjU0MTIxfQ.ZuwZ4X25p87YdLYI1rR_zhDwh__AREJB4rBz6q9gVMk"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/users/current"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZGVlcGVzaCIsImVtYWlsIjoiZGVlcGVzaEB5b3BtYWlsLmNvbSIsImlkIjoiNjQ1NDY2ZTZlZTUyMjA4Y2EwMzZhN2ZmIn0sImlhdCI6MTY4MzI1MzIyMSwiZXhwIjoxNjgzMjU0MTIxfQ.ZuwZ4X25p87YdLYI1rR_zhDwh__AREJB4rBz6q9gVMk"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"username\":\"deepesh_rastogi\",\r\n    \"phone\":\"8888888888\"\r\n}"
+						},
+						"url": "http://localhost:5000/api/users/645466e6ee52208ca036a7ff"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZGVlcGVzaCIsImVtYWlsIjoiZGVlcGVzaEB5b3BtYWlsLmNvbSIsImlkIjoiNjQ1NDY2ZTZlZTUyMjA4Y2EwMzZhN2ZmIn0sImlhdCI6MTY4MzI1MzIyMSwiZXhwIjoxNjgzMjU0MTIxfQ.ZuwZ4X25p87YdLYI1rR_zhDwh__AREJB4rBz6q9gVMk"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/users/645466e6ee52208ca036a7ff"
+					},
+					"response": []
+				},
+				{
+					"name": "Users list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZGVlcGVzaCIsImVtYWlsIjoiZGVlcGVzaEB5b3BtYWlsLmNvbSIsImlkIjoiNjQ1NDY2ZTZlZTUyMjA4Y2EwMzZhN2ZmIn0sImlhdCI6MTY4MzI1MzIyMSwiZXhwIjoxNjgzMjU0MTIxfQ.ZuwZ4X25p87YdLYI1rR_zhDwh__AREJB4rBz6q9gVMk"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/users/user"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contacts",
+			"item": [
+				{
+					"name": "Create Contacts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZGVlcGVzaCIsImVtYWlsIjoiZGVlcGVzaEB5b3BtYWlsLmNvbSIsImlkIjoiNjQ1NDY5NGJlZTUyMjA4Y2EwMzZhODBiIn0sImlhdCI6MTY4MzI1NDE4NywiZXhwIjoxNjgzMjU1MDg3fQ.vWro5bRB2fnfFlme54ERQ5Y-zAwRNiPtAxHDf9g40Vg"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"amit\", \r\n    \"email\":\"amit@yopmail.com\", \r\n    \"phone\":\"9898989898\"\r\n}"
+						},
+						"url": "http://localhost:5000/api/contacts"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Contacts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZGVlcGVzaCIsImVtYWlsIjoiZGVlcGVzaEB5b3BtYWlsLmNvbSIsImlkIjoiNjQ1NDY5NGJlZTUyMjA4Y2EwMzZhODBiIn0sImlhdCI6MTY4MzI1NDE4NywiZXhwIjoxNjgzMjU1MDg3fQ.vWro5bRB2fnfFlme54ERQ5Y-zAwRNiPtAxHDf9g40Vg"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"deepesh\", \r\n    \"email\":\"deepesh@yopmail.com\", \r\n    \"phone\":\"9898889888\", \r\n    \"password\":\"deepesh@123\"\r\n}"
+						},
+						"url": "http://localhost:5000/api/contacts"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Contact details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZGVlcGVzaCIsImVtYWlsIjoiZGVlcGVzaEB5b3BtYWlsLmNvbSIsImlkIjoiNjQ1NDY5NGJlZTUyMjA4Y2EwMzZhODBiIn0sImlhdCI6MTY4MzI1NDE4NywiZXhwIjoxNjgzMjU1MDg3fQ.vWro5bRB2fnfFlme54ERQ5Y-zAwRNiPtAxHDf9g40Vg"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"amit\", \r\n    \"email\":\"amit@yopmail.com\", \r\n    \"phone\":\"9898989898\"\r\n}"
+						},
+						"url": "http://localhost:5000/api/contacts/64546c70ee52208ca036a817"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Contact",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZGVlcGVzaCIsImVtYWlsIjoiZGVlcGVzaEB5b3BtYWlsLmNvbSIsImlkIjoiNjQ1NDY5NGJlZTUyMjA4Y2EwMzZhODBiIn0sImlhdCI6MTY4MzI1NDE4NywiZXhwIjoxNjgzMjU1MDg3fQ.vWro5bRB2fnfFlme54ERQ5Y-zAwRNiPtAxHDf9g40Vg"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"vinod\", \r\n    \"email\":\"vinod@yopmail.com\", \r\n    \"phone\":\"9899999999\"\r\n}"
+						},
+						"url": "http://localhost:5000/api/contacts/64546c70ee52208ca036a817"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Contact",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZGVlcGVzaCIsImVtYWlsIjoiZGVlcGVzaEB5b3BtYWlsLmNvbSIsImlkIjoiNjQ1NDY5NGJlZTUyMjA4Y2EwMzZhODBiIn0sImlhdCI6MTY4MzI1NDE4NywiZXhwIjoxNjgzMjU1MDg3fQ.vWro5bRB2fnfFlme54ERQ5Y-zAwRNiPtAxHDf9g40Vg"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:5000/api/contacts/64546d2aee52208ca036a81d"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
