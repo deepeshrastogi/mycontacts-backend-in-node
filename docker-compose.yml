@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  backend:
+    container_name: backend-app
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    command: sh -c "npm install && npm run dev"
+    environment:
+      NODE_ENV: development
+      MONGO_URI: mongodb://mongo:27017/mycontacts
+    depends_on:
+      - mongo
+    restart: unless-stopped
+
+  mongo:
+    container_name: DB-mongo
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+
+volumes:
+  mongo_data:
